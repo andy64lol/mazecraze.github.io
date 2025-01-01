@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Craze - Intro</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #121212;
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        #introContainer {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #ffcc00;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 20px;
+            color: #bbb;
+        }
+
+        #startGameButton, #startSmallGameButton {
+            background-color: #444;
+            color: white;
+            border: 2px solid #ffcc00;
+            font-size: 20px;
+            padding: 15px 30px;
+            margin: 10px;
+            cursor: pointer;
+            width: 250px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #startGameButton:hover, #startSmallGameButton:hover {
+            background-color: #555;
+        }
+
+        #footer {
+            position: absolute;
+            bottom: 10px;
+            font-size: 14px;
+            color: #aaa;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            p {
+                font-size: 16px;
+            }
+
+            #startGameButton, #startSmallGameButton {
+                width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="introContainer">
+        <h1>Welcome to Maze Craze</h1>
+        <p>Get ready for an exciting maze adventure! Choose your game size below:</p>
+        <button id="startGameButton" onclick="startNormalGame()">Start big map</button>
+        <button id="startSmallGameButton" onclick="startSmallGame()">Start Small map (recommended for mobile devices)</button>
+    </div>
+    <div id="footer">
+        "Made by a lazy student who never sleeps" <br>
+        —andy64
+    </div>
+
+    <script>
+        function startNormalGame() {
+            window.location.href = "game.html";
+        }
+
+        function startSmallGame() {
+            window.location.href = "game_small.html";  
+        }
+    </script>
+</body>
+</html>
